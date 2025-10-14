@@ -1,0 +1,179 @@
+body {
+  background: linear-gradient(120deg, #99f7e7 0%, #70a7ff 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smartphone {
+  width: 340px;
+  height: 630px;
+  border-radius: 35px;
+  background: rgba(255,255,255,0.86);
+  box-shadow: 0 8px 40px 0 #35a7e366, 0 1.5px 8px #24ffd5aa;
+  display: flex;
+  flex-direction: column;
+  border: 6px solid #2bc6a0;
+  overflow: hidden;
+  position: relative;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 18px 11px 18px;
+  background: linear-gradient(90deg, #e8fff1 0%, #d3efff 80%);
+  font-size: 1.10em;
+  font-weight: 700;
+  letter-spacing: .25px;
+  color: #116283;
+  border-bottom: 2px solid #a4f6df;
+}
+
+.screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 16px 0 16px;
+  gap: 12px;
+  background: linear-gradient(120deg, #fafdffcc 60%, #e3fff9cc 100%);
+}
+
+.number-display {
+  margin: 22px 0 0 0;
+  width: 88%;
+  min-height: 56px;
+  border-radius: 19px;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  background: linear-gradient(109deg,#d6fffb 13%, #fbfff9 100%);
+  color: #217087;
+  border: 2.5px solid #8cf4d2;
+  box-shadow: 0 3px 21px -9px #36dbc5aa;
+  outline: none;
+  text-align: center;
+  padding: 12px 0;
+  transition: border 0.2s, box-shadow 0.17s;
+  font-weight: 600;
+}
+
+.number-display:focus {
+  border-color: #2dbeea;
+  box-shadow: 0 0 0 2px #16ffd955;
+}
+
+.carrier-row {
+  font-size: 1.06em;
+  color: #20b088;
+  min-height: 1.2em;
+  margin-bottom: 5px;
+  margin-top: 3px;
+  transition: color .13s;
+  text-shadow: 0 0 8px #e8fff9;
+  font-weight: 600;
+}
+
+.dial-pad {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 15px 0 0 0;
+}
+
+.dial-pad button {
+  width: 64px;
+  height: 48px;
+  font-size: 1.35em;
+  border-radius: 16px;
+  background: linear-gradient(140deg,#e6fff5 0,#c7eaff 100%);
+  border: none;
+  color: #158cb8;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.14s, transform 0.10s, box-shadow 0.12s;
+  box-shadow: 0 1.3px 8px 0 #37dde766;
+  outline: none;
+  position: relative;
+}
+
+.dial-pad button:active, .dial-pad button:focus {
+  background: linear-gradient(120deg,#8eecec 0%, #a8ffe8 100%);
+  box-shadow: 0 4px 14px 0 #1ffdd366;
+  transform: scale(1.08);
+  border: 1.7px solid #22d39eaa;
+}
+
+.plus {
+  color: #23b966;
+  font-size: 1.25em;
+}
+.del {
+  color: #ec356c;
+  font-size: 1.19em;
+}
+
+.action-btns {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.action-btns button {
+  padding: 12px 34px;
+  background: linear-gradient(90deg,#14d6b3 72%, #61bbfc 99%);
+  border: none;
+  color: #fff;
+  font-size: 1.13em;
+  border-radius: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 9px rgba(41,121,255,0.07);
+  transition: background 0.13s, transform 0.08s;
+  letter-spacing: .18px;
+}
+
+.action-btns button:active {
+  background: linear-gradient(90deg,#11c8c3 53%, #9beafd 100%);
+  transform: scale(1.04);
+}
+
+#results-div {
+  margin-top: 17px;
+  font-size: 1.09em;
+  border-radius: 8px;
+  min-height: 34px;
+  text-align: center;
+  font-weight: 600;
+  transition: background .12s, color .11s;
+  box-shadow: 0 0px 18px -6px #aeddf688;
+}
+
+#results-div.valid {
+  color: #148d29;
+  background: #e0fff3;
+  border: 1.5px solid #38e284;
+  padding: 10px 0;
+}
+
+#results-div.invalid {
+  color: #ea2259;
+  background: #ffdfe6;
+  border: 1.5px solid #faafd5;
+  padding: 10px 0;
+}
+
+@media (max-width: 420px) {
+  .smartphone {
+    width: 96vw;
+    height: 99vh;
+  }
+  .dial-pad button {
+    width:95%; min-width:40px;
+  }
+}

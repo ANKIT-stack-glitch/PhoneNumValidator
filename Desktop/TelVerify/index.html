@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8">
+  <title>Nepali Dial Pad Validator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="smartphone">
+    <div class="top-bar">
+      <div class="signal">📶</div>
+      <div class="carrier">NTC/Ncell</div>
+      <div class="battery">🔋</div>
+    </div>
+    <div class="screen">
+      <div class="number-display" id="user-input" tabindex="0" contenteditable="true"></div>
+      <div class="carrier-row" id="carrier-row"></div>
+      <div class="dial-pad">
+        <button class="digit">1</button>
+        <button class="digit">2</button>
+        <button class="digit">3</button>
+        <button class="digit">4</button>
+        <button class="digit">5</button>
+        <button class="digit">6</button>
+        <button class="digit">7</button>
+        <button class="digit">8</button>
+        <button class="digit">9</button>
+        <button class="plus">+</button>
+        <button class="digit">0</button>
+        <button class="del">⌫</button>
+      </div>
+      <div class="action-btns">
+        <button id="check-btn">Check</button>
+        <button id="clear-btn">Clear</button>
+      </div>
+      <div id="results-div"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
